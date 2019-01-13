@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    /*border: solid 1px black;*/
+}
+
+html {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+}
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+
+
+body {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    /*background-image: url('../Images/paper-fibers.png');
+    background-repeat: repeat;*/
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+h3, h4, h5, p {
+    width: 800px;
+    max-width: 90%;
+}
+
+h3 {
+    font-size: 1.6em;
+    margin: 25px 0 20px 0;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+}
+
+figure {
+    margin: 20px 0;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    overflow: hidden; /* To hide the horizontal overflow of the section headers */
+}
+
+main section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+main section a {
+    text-decoration: none;
+    color: #07b6b6;
+    transition: color 0.2s;
+}
+
+main section a:hover {
+    color: #058686;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+a.img-link {
+    width: 800px;
+    max-width: 90%;
+    margin: 20px 0 30px 0;
+}
+
+a.img-link img {
+    width: 100%;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+a.img-noshadow img {
+    box-shadow: none;
+}
+
+a.tall-img {
+    width: 500px;
+}
+
+video {
+    width: 800px;
+    max-width: 90%;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+    margin: 20px 0 30px 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Site Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+#site-header h1 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 6em;
+    font-weight: 300;
+    margin: 50px 0 20px 0;
+    max-width: 90%;
+    color: #0396b1;
+
+    background-color: #0396b1; /* Fallback */
+    background-image: linear-gradient(to bottom right, #0cb6a8 20%, #0396b1);
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+@media screen and (max-width: 740px) {
+    #site-header h1 {
+        font-size: 4.5em;
+    }
+}
+
+#site-header h3 {
+    margin: 0 0 30px 0;
+}
+
+#site-header hr {
+    width: 60%;
+    height: 1px;
+    border-radius: 2px;
+    border: none;
+    /*background-color: #999; */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.30) 20%, rgba(0, 0, 0, 0.30) 80%, rgba(0, 0, 0, 0));
+}
+
+#site-header nav {
+    width: 800px;
+    max-width: 80%;
+}
+
+#site-header nav ul {
+    padding: 0;
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#site-header nav hr {
+    display: none;
+    width: 9em;
+    background-image: none; /* Overrides above hr style */
+    background-color: #ccc;
+}
+
+#site-header a {
+    color: #07b6b6;
+    text-decoration: none;
+    margin: 10px;
+    transition: color 0.15s;
+}
+
+#site-header a:hover {
+    color: #058686;
+    text-decoration: none;
+    margin: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    #site-header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #site-header li {
+        margin: 10px 0 10px 0;
+    }
+
+    #site-header nav hr {
+        display: initial;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             Site Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#site-footer {
+    margin-top: 60px;
+}
+
+#site-footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#site-footer li {
+    list-style: none;
+    margin: 0 50px 20px 50px;
+    font-size: 0.85em;
+}
+
+#site-footer a {
+    text-decoration: none;
+    text-decoration: underline #333;
+    color: #333;
+}
+
+#site-footer #references-link {
+    text-decoration: underline #333;
+    cursor: pointer;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Section Header Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    height: 20vmin;
+    background-image: url('../Images/blue-section-background.jpg');
+    background-size: cover; 
+    box-shadow: inset 0 0.2vh 30px rgba(0, 0, 0, 0.6), inset 0 -0.2vh 30px rgba(0, 0, 0, 0.6);
+    margin: 50px 0 50px 0;
+
+}
+
+.section-header h2 {
+    font-size: calc(1.2em + 3vw);
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Image Galley Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*.img-gallery {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}*/
+
+.img-gallery {
+    width: 800px;
+    max-width: 80%;
+    margin: 20px 0 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                References Popup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#references-popup {
+    display: none;
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 80%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    text-align: left;
+}
+
+#references-popup h3 {
+    margin: 0 0 50px 0;
+    text-align: left;
+}
+
+#references-popup a {
+    word-break: break-all;
+    text-decoration: none;
+    color: #07b6b6;
+    transition: color 0.2s;
+}
+
+#references-popup a:hover {
+    color: #058686;
+}
+
+#references-popup li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.close {
+    font-size: 2em;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Back to Top Button
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: calc(-1em + 80px);
+    max-width: 80px;
+    transition: transform 0.2s;
+}
+
+#back-to-top-btn:hover {
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 1000px) {
+    #back-to-top-btn {
+        display: none;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                About Me Section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#contact-line {
+    margin: 20px 0 30px 0;
+}
