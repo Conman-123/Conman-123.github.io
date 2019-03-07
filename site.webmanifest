@@ -1,0 +1,14 @@
+{
+    "name": "Conman-123",
+    "short_name": "Conman-123",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#01a2af",
+    "background_color": "#01a2af",
+    "display": "standalone"
+}
